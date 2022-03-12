@@ -1,0 +1,5 @@
+package com.ashu.sobackend.repositories;
+
+public interface UserRepository {
+
+}
