@@ -1,0 +1,5 @@
+package com.ashu.sobackend.security;
+
+public class WebSecurityConfig {
+
+}

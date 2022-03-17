@@ -1,0 +1,5 @@
+package com.ashu.sobackend.payload.request;
+
+public class SignupRequest {
+
+}
