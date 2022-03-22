@@ -11,6 +11,8 @@ import Home from "./components/home.component";
 import Profile from "./components/profile.component";
 import StackOverflow from "./components/StackOverflow";
 import AddQuestion from "./components/AddQuestion";
+import ViewQuestion from "./components/ViewQuestion";
+import { ProtectedRoute } from "./ProtectedRoute";
 
 import EventBus from "./common/EventBus";
 
@@ -54,9 +56,13 @@ class App extends Component {
 
     return (
       <div>
-        <nav className="navbar navbar-expand navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-sm navbar-light bg-light sticky-top shadow p-1 mb-3">
           <Link to={"/"} className="navbar-brand">
             StackOverflow
+            {/* <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Stack_Overflow_logo.svg/220px-Stack_Overflow_logo.svg.png"
+              alt="logo"
+            /> */}
           </Link>
           <div className="navbar-nav mr-auto">
 
@@ -102,8 +108,9 @@ class App extends Component {
         <div className="container mt-3">
           <Switch>
             <Route exact path="/" component={Login} />
-            <Route exact path="/home" component={StackOverflow} />
-            <Route exact path="/add-question" component={AddQuestion} />
+            <ProtectedRoute exact path="/home" component={StackOverflow} />
+            <ProtectedRoute exact path="/add-question" component={AddQuestion} />
+            <ProtectedRoute exact path="/question" component={ViewQuestion} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component={Profile} />

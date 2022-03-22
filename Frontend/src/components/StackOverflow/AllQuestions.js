@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./CSS/AllQuestions.css";
 import { Link } from "react-router-dom";
+import ReactHtmlParser from "react-html-parser";
 
-function AllQuestions() {
+function AllQuestions({ data }) {
 
     return (
         <div className="all-questions">
@@ -23,7 +24,7 @@ function AllQuestions() {
                     </div>
                 </div>
                 <div className="question-answer">
-                    <Link>How do I get a Date without time in Java?e</Link>
+                    <Link to={`/question?q=${data?.id}`}>{data?.title}</Link>
 
 
                     <div
@@ -31,21 +32,22 @@ function AllQuestions() {
                             maxWidth: "90%",
                         }}
                     >
-                        <div>What is the most efficient way to get a Date object without the time?</div>
+                        <div>{ReactHtmlParser(data?.body)}</div>
                     </div>
                     <div
                         style={{
                             display: "flex",
                         }}
                     >
-                        <span className="question-tags">java</span>
-                        <span className="question-tags">date</span>
+                        <span className="question-tags">Tag1</span>
+                        <span className="question-tags">Tag2</span>
+                        <span className="question-tags">Tag3</span>
                     </div>
                     <div className="author">
-                        <small>Timestamp</small>
+                        {/* <small>Timestamp</small> */}
                         <div className="auth-details">
                             <p>
-                                Rosdi Kasim
+                                {data?.username}
                             </p>
                         </div>
                     </div>

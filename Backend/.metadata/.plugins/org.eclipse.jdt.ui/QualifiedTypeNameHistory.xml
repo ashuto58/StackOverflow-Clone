@@ -17,10 +17,13 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="com.ashu.sobackend.service.UserService"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
     <fullyQualifiedTypeName name="com.ashu.sobackend.models.User"/>
     <fullyQualifiedTypeName name="com.ashu.sobackend.models.Role"/>
     <fullyQualifiedTypeName name="com.ashu.sobackend.models.ERole"/>
     <fullyQualifiedTypeName name="com.ashu.sobackend.repositories.UserRepository"/>
+    <fullyQualifiedTypeName name="com.ashu.sobackend.dao.QuestionDao"/>
+    <fullyQualifiedTypeName name="com.ashu.sobackend.models.Question"/>
+    <fullyQualifiedTypeName name="com.ashu.sobackend.service.QuestionService"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration"/>
 </qualifiedTypeNameHistroy>

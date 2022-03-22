@@ -1,0 +1,5 @@
+package com.ashu.sobackend.models;
+
+public class Question {
+
+}

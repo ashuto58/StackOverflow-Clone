@@ -2,8 +2,9 @@ import React from "react";
 import "./CSS/Main.css";
 import AllQuestions from "./AllQuestions";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
-function Main() {
+function Main({ questions }) {
     return (
         <div className="main">
             <div className="main-container">
@@ -14,7 +15,7 @@ function Main() {
                     </Link>
                 </div>
                 <div className="main-desc">
-                    <p>5 questions</p>
+                    <p>{questions && questions.length} Questions</p>
                     <div className="main-filter">
                         <div className="main-tabs">
                             <div className="main-tab">
@@ -33,13 +34,11 @@ function Main() {
                     </div>
                 </div>
                 <div className="questions">
-                    <div className="question">
-                        <AllQuestions />
-                        <AllQuestions />
-                        <AllQuestions />
-                        <AllQuestions />
-                        <AllQuestions />
-                    </div>
+                    {questions?.map((_q) => (
+                        <div className="question">
+                            <AllQuestions data={_q} />
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

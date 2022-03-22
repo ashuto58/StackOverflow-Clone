@@ -1,5 +1,0 @@
-package com.ashu.sobackend.payload.response;
-
-public class MessageResponse {
-
-}
