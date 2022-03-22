@@ -1,4 +1,4 @@
-package com.springrest.springrest.entities;
+package com.ashu.sobackend.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
