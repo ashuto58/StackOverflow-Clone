@@ -97,6 +97,13 @@ function MainQuestion() {
         getAnswer();
     }, []);
 
+    async function getUpdatedAnswer() {
+        await axios
+            .get(`http://localhost:8090/questions/answers/${id}`)
+            .then((res) => setanswers(res.data))
+            .catch((err) => console.log(err));
+    }
+
 
     const handleSubmit = async () => {
         const body = {
@@ -115,7 +122,7 @@ function MainQuestion() {
             .then(() => {
                 alert("Answer added successfully");
                 setAnswer("");
-                // getUpdatedAnswer();
+                getUpdatedAnswer();
             })
             .catch((err) => console.log(err));
     };
